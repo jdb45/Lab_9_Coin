@@ -24,5 +24,3 @@ def get_links_dict():
         dict[x] = new_link
 
     return dict
-
-print(get_links_dict())
