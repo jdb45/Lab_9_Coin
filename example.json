@@ -1,0 +1,24 @@
+[{
+"id": 1,
+"state": "Delaware",
+"date_issued": "January 4, 1999",
+"description": "The Delaware quarter’s reverse celebrates Caesar Rodney’s historic horseback ride to the Continental Congress in 1776 to cast the deciding vote in favor of independence.",
+"image": "https://www.usmint.gov/images/mint_programs/50sq_program/states/DE_Designs.gif",
+"collected": "False"
+},
+{
+"id": 2,
+"state": "Pennsylvania",
+"date_issued": "March 8, 1999",
+"description": "The Pennsylvania quarter depicts the “Commonwealth” statue, an outline of the state, the state motto, and a keystone reflecting the state’s nickname, “The Keystone State.”",
+"image": "https://www.usmint.gov/images/mint_programs/50sq_program/states/PA_Designs.gif",
+"collected": "False"
+},
+{
+"id": 3,
+"state": "New Jersey",
+"date_issued": "May 17, 1999",
+"description": "The New Jersey quarter depicts General George Washington and members of the Colonial Army crossing the Delaware River en route to very important victories during the Revolutionary War. The design is based on the 1851 painting by Emmanuel Leutze, “Washington Crossing the Delaware.”",
+"image": "https://www.usmint.gov/images/mint_programs/50sq_program/states/NJ_Designs.gif",
+"collected": "False"
+}]

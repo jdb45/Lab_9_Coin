@@ -6,5 +6,6 @@ c.execute('CREATE TABLE IF NOT EXISTS FiftyStateCoin ( '
           'state VARCHAR(15), '
           'dateIssued INT(15), '
           'description VARCHAR(100), '
-          'image VARCHAR(100)'
+          'image VARCHAR(100), '
+          'collected boolean'
           )
