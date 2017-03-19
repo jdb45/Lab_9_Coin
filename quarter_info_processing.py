@@ -4,8 +4,8 @@ import re
 # Returns the dates each coin was released into circulation
 def get_dates():
     dates = []
-    with open('quarter_info.txt', 'r', encoding='utf8') as info:
-        for line in info:
+    with open('quarter_info.txt', 'r', encoding='utf8') as f:
+        for line in f:
             if 'Coin Release' in line:
                 date = re.findall("Release: (.*) Release", line, re.DOTALL)
                 dates.append(date[0])
@@ -17,11 +17,12 @@ def get_dates():
 # TODO many design descriptions are on multiple lines and don't have a universal stop character. How to deal with this?
 def get_descriptions():
     descriptions = []
-    with open('quarter_info.txt', 'r', encoding='utf8') as info:
-        for line in info:
-            if 'Delaware' in line:
-                description = re.findall("Design: (.*) ", line, re.DOTALL)
-                descriptions.append(description)
+    with open('quarter_info.txt', 'r', encoding='utf8') as f:
+        for line in f:
+            if 'Design: ' in line:
+                description = re.findall("Design: (.*) .", line, re.DOTALL)
+                descriptions.append(description[0])
 
-print(get_dates())
+    return descriptions
+
 print(get_descriptions())
