@@ -19,8 +19,6 @@ def get_states():
 
     return states_reordered
 
-print(get_states())
-
 
 # Returns the dates each coin was released into circulation
 def get_dates():
