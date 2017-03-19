@@ -20,9 +20,8 @@ def get_descriptions():
     with open('quarter_info.txt', 'r', encoding='utf8') as info:
         for line in info:
             if 'Delaware' in line:
-                description = re.findall("Design: (.*) C", line, re.DOTALL)
+                description = re.findall("Design: (.*) ", line, re.DOTALL)
                 descriptions.append(description)
 
-dates = get_dates()
-print(dates)
+print(get_dates())
 print(get_descriptions())
