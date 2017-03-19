@@ -1,7 +1,10 @@
 import sqlite3
 conn = sqlite3.connect(":memory:")
 c = conn.cursor()
-c.execute('''CREATE TABLE FiftyStateCoin ( number  PRIMARY KEY ,  state Int , state String(50),YearIssued  Int(4) , discripption String , image String  ) ''')
-
-
- 
+c.execute('CREATE TABLE IF NOT EXISTS FiftyStateCoin ( '
+          'id PRIMARY KEY AUTOINCREMENT, '
+          'state VARCHAR(15), '
+          'dateIssued INT(15), '
+          'description VARCHAR(100), '
+          'image VARCHAR(100)'
+          )
