@@ -35,22 +35,30 @@ def get_dates():
 
 # Returns each coin's design description
 # TODO many design descriptions are on multiple lines and don't have a universal stop character. How to deal with this?
-# Very close: returns a list of lists with all sentence parts but the first line's last word
 def get_descriptions():
+    years = ["1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007"]
     descriptions = []
+    final = []
+    description = ""
     with open('quarter_info.txt', 'r', encoding='utf8') as f:
         try:
             for line in f:
                 if 'Design: ' in line:
-                    description = re.findall("Design: (.*) .", line, re.DOTALL)
+                    description = (re.findall("Design: (.*) .", line, re.DOTALL)) + (re.findall("\s(\w+)$", line, re.DOTALL))
                     nextline = next(f).strip()
-                    while nextline.title() not in states:
+                    while (nextline.title() not in states) and (nextline not in years):
                         description.append(nextline)
                         nextline = next(f).strip()
                     descriptions.append(description)
         except:
-            pass
+            descriptions.append(description)
 
-    return descriptions
+    for x in descriptions:
+        concat = ' '.join(x)
+        final.append(concat)
 
-print(get_descriptions())
+    return final
+
+desc = get_descriptions()
+for x in desc:
+    print(x)
