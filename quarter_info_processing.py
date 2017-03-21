@@ -44,7 +44,7 @@ def get_descriptions():
                 if 'Design: ' in line:
                     description = re.findall("Design: (.*) .", line, re.DOTALL)
                     nextline = next(f).strip()
-                    while nextline not in states:
+                    while nextline.title() not in states:
                         description.append(nextline)
                         nextline = next(f).strip()
                     descriptions.append(description)
